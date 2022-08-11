@@ -12,12 +12,12 @@ const submit = document.getElementById('regBtn');
 submit.addEventListener("click", function(e){
     let p1 = document.getElementById('password1').value;
     let p2 = document.getElementById('password2').value;
-    let checkbox = document.getElementById('terminos').value;
-    if(p1.length >= 6 && p1 === p2){  
+    let checkbox = document.getElementById('terminos');
+    if(p1.length >= 6 && p1 === p2 && checkbox.checked){  
         showAlertSuccess()
     }
     else{
         showAlertError()
     }
-    console.log(checkbox)
+    console.log(checkbox.checked)
 })
