@@ -7,17 +7,17 @@ function showAlertError() {
 }
 
 const submit = document.getElementById('regBtn');
-let password1 = document.getElementById('password1');
-let password2 = document.getElementById('password2');
 
 
 submit.addEventListener("click", function(e){
-    let password1 = document.getElementById('password1');
-    let password2 = document.getElementById('password2');
-    if(password1.value === password2.value){
+    let p1 = document.getElementById('password1').value;
+    let p2 = document.getElementById('password2').value;
+    
+    if(p1.length >= 6 && p1 === p2){  
         showAlertSuccess()
     }
     else{
         showAlertError()
     }
+    
 })
